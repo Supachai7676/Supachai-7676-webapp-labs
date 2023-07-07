@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+        ul.navbar li {
+            float: left;
+        }
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        ul.navbar li a:hover {
+            color: black;
+            background-color: yellow
+        }
+        ul.navbar li a:active { 
+            color: white;
+            background-color: purple;
+        }
+        #unordered {
+            background-color: #96d5df;
+            border: #250fef solid 5px;
+            padding: 5px;
+            width: 200px;
+        }
+        #ordered {
+            background-color: #76f489;
+            border: #046a41 solid 5px;
+            padding: 5px;
+            width: 200px;
+        }
+    </style>
+    <meta charset = "utf-8" />
+    <title>lab2 P4</title>    
+  </head>
+  <body>
+    <ul class="navbar">
+        <li><a href="#Unordered">Unordered List</a></li>
+        <li><a href="#Ordered">Ordered List</a></li>
+    </ul>
+    <p id="unordered">This is an unordered list:</p>
+    <ul style = "list-style-type: circle">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ul>   
+    <p id="ordered">This is an ordered list:</p>
+    <ol type="i" >
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+    </body>    
+</html>
