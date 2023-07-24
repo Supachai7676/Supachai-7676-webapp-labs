@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>lab4 ex2</title>
+  </head>
+  <body>
+    <script>
+      let newArray = [];
+      let primeArray = [];
+
+      function getPrimeNumbers(n) {
+        for (let i = 0; i <= n; i++) {
+          primeArray.push(i);
+        }
+      }
+      for (primeNumber of newArray) {
+        let i;
+        for (i = 2; i < primeNumber; i++) {
+          if (primeNumber % i == 0) {
+            break;
+          }
+        }
+        if (i == primeNumber) {
+          console.log(i);
+          primeArray.push(primeNumber);
+        }
+      }
+
+      while (true) {
+        let input = Number(prompt("Enter a positive integer:"));
+        if (input >>> 0 === parseFloat(input)) {
+          getPrimeNumbers(input);
+          alert("For n = " + input + " Prime number are: " + primeArray);
+          break;
+        }
+      }
+    </script>
+    <h3>Prime Number Finder!</h3>
+    <p class="header">Write the web app to prompt accepting for a positive integer number</p>
+    <ul>
+      <li>
+        If the entered text is not a positive integer number, then the web app
+        will keep asking for a number until the valid positive integer is
+        entered
+      </li>
+      <li>
+        If the entered text is a positive integer, then the app will print prime
+        numbers that are not greater than that given positive integer
+      </li>
+    </ul>
+    <p class="header">Hint:</p>
+    <ol>   
+      <li>You may want to use loop with label</li>
+      <li>You may want to use array with push function</li>
+    </ol>
+  </body>
+</html>
