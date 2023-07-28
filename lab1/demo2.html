@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>demo3</title>
+  </head>
+  <body>
+    <script>
+      let divideByTwo = n => n / 2;
+
+      do {
+        userInputInt = Number(prompt("Enter an integer:"));
+
+        if (userInputInt && Number.isInteger(userInputInt) ) {
+            alert(divideByTwo(userInputInt));
+            break;
+        }
+      } while (true)
+    </script>
+  </body>
+</html> 
