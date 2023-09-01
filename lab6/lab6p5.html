@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-timing-function: linear ease-in-out;
+        animation-iteration-count: infinite;
+        animation-name: example;
+  }
+
+  @keyframes example {
+    0%, 100% {
+      left: 0px;
+      background-color: red;
+    }
+    50% {
+      left: 200px;
+      background-color: yellow;
+    }
+  }
+
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
