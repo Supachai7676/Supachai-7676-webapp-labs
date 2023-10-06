@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,3 +37,43 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>lab7p3</title>
+    <style>
+      .name {
+        color: blue;
+      }
+
+      .location {
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>List of Restaurants</h1>
+    <ol id="demo"></ol>
+
+    <script>
+      fetch("json/places.json")
+    .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          const results= data.results;
+          for (let restaurant of results) {
+            let name = restaurant.name;
+            let locationLat = restaurant.geometry.location.lat;
+            let locationLng = restaurant.geometry.location.lng;
+            document.getElementById("demo").innerHTML += "<li> <span class = 'name'> name: " + name + "<span></li> <br/> <span class='location'>location = " + locationLat + " " + locationLng + "</span> <br/>" +
+              "<br/>";
+          }
+        });
+    </script>
+  </body>
+</html>
+>>>>>>> 7609c1bad7b74476eeb19d38fda255d833d675d4
