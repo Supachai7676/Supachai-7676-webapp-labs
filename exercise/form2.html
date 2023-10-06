@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Processing forms with events</title>
+  </head>
+  <body>
+    <h1>Mad Lips</h1>
+    <div>
+      <label
+        >Noun:
+        <input id="noun" type="text" />
+      </label>
+      <br />
+      <label
+        >Adjective:
+            <input id="adj" type="text" />
+      </label>
+      <br />
+      <label
+        >Someone's Name:
+            <input id="name" type="text" />
+      </label>
+      <br />
+      <button id="button" type="button">lib it!</button>
+      <div id="message"></div>
+    </div>
+
+    <script>
+      let button = document.getElementById("button");
+      const onButtonClick = function () {
+        let noun = document.getElementById("noun").value;
+        let adj = document.getElementById("adj").value;
+        let name = document.getElementById("name").value;
+        let lib = "Generated story: " + name + " is " + adj + " and love to eat " + noun;
+        document.getElementById("message").textContent = lib;
+      };
+      button.addEventListener("click", onButtonClick);
+    </script>
+  </body>
+</html>

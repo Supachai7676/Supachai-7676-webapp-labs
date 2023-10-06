@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        </style>
+                <meta charset="utf-8">
+                <title>lab7p2</title>
+    </head>
+    <body>
+        <h1>Reading Students Information</h1>
+        <ol id ="demo"></ol>
+        <script>        
+            fetch("json/students.json")
+            .then(response => {
+                return response.json();
+            })  
+            .then(data => {
+                let wclass = data.wclass;
+                for (let entry of wclass) {
+                    let student = entry.student;
+                    let id = student["@attributes"].id;
+                    let name = student.name;
+                    let skill = student.skill;
+                    document.getElementById("demo").innerHTML += "<li>" + id + " <strong>" + name + "</strong> has skills <i>" + skill + "</i></li><br/>";
+                }
+            })
+        </script>    
+    </body>
+</html>
